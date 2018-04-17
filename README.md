@@ -2,7 +2,8 @@
 
 A Hyperapp component that implements the Google Invisible reCAPTCHA.
 
-## [Demo][demo] ##
+### [Demo][demo] ###
+
 
 ## Install ##
 
@@ -94,4 +95,5 @@ export default ({}, {}) =>
 ## License
 
 hyperapp-google-invisible-recaptcha is MIT licensed. See [LICENSE](LICENSE).
+
 [demo]: https://aalises.github.io/hyperapp-google-invisible-recaptcha/
