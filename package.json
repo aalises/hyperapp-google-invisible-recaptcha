@@ -2,11 +2,12 @@
   "name": "hyperapp-google-invisible-recaptcha",
   "version": "1.0.0",
   "description": "Hyperapp Component that implements the Google Invisible reCAPTCHA",
-  "main": "dist/lib/recaptcha.js",
+  "main": "dist/lib/recaptcha.es.js",
+  "browser": "dist/lib/recaptcha.umd.js",
   "scripts": {
     "start": "webpack-dev-server --config example/webpack.config.js",
     "build:example": "webpack --config example/webpack.config.js --env production",
-    "build": "webpack --config ./webpack.config.js --env production",
+    "build": "rollup --c ./rollup.config.js",
     "deploy": "npm run build && ./scripts/gh-pages.sh",
     "test": "jest --coverage --no-cache"
   },
@@ -33,6 +34,8 @@
     "imports": "^1.0.0",
     "jest": "^22.1.4",
     "node-libs-browser": "^2.0.0",
+    "rollup": "^0.58.0",
+    "rollup-plugin-babel": "^3.0.3",
     "uglifyjs-webpack-plugin": "^1.2.4",
     "webpack": "^3.4.0",
     "webpack-dev-server": "^2.4.2"

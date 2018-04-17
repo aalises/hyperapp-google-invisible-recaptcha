@@ -65,9 +65,5 @@ const createRecaptcha = (props,el) => {
 
 
 export default (props) => (
-  <div oncreate = {el => {
-        container = el; //We store a reference to the node
-        createRecaptcha(props,el); 
-      }}>
-  </div>
+  h("div",{oncreate: el => { container = el; createRecaptcha(props,el);}},[])
 );

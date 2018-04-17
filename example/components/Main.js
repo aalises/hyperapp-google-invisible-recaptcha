@@ -1,6 +1,6 @@
 import { h } from 'hyperapp';
 import Header from './Header';
-import Recaptcha from '../../src/InvisibleRecaptcha.js';
+import Recaptcha from '../..';
 
 let recaptcha = null;
 
