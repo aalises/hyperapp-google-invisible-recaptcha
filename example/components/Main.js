@@ -16,7 +16,7 @@ const executeCaptcha = () => {
 export default ({}, {}) =>
   <div>
     <Header />
-    <Recaptcha onInstanceCreated={instance => recaptcha = instance} sitekey="6LcbGj4UAAAAACOzp7aOXS6J4kTJBRPJNy5O3JBh" onResolved = {_ => onCaptchaResolved()}/>
+    <Recaptcha onInstanceCreated={instance => recaptcha = instance} sitekey="6LeFuVMUAAAAAAPZs1NZltCvxIzEVRyik4Ai1G-u" onResolved = {_ => onCaptchaResolved()}/>
     <section>
       <button onclick={_ => recaptcha && executeCaptcha()}>
         Validate Recaptcha

@@ -8,7 +8,7 @@
     "start": "webpack-dev-server --config example/webpack.config.js",
     "build:example": "webpack --config example/webpack.config.js --env production",
     "build": "rollup --c ./rollup.config.js",
-    "deploy": "npm run build && ./scripts/gh-pages.sh",
+    "deploy": "npm run build:example && ./scripts/gh-pages.sh",
     "test": "jest --coverage --no-cache"
   },
   "author": "Albert Alises Sorribas",
