@@ -1,6 +1,6 @@
 {
   "name": "hyperapp-google-invisible-recaptcha",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Hyperapp Component that implements the Google Invisible reCAPTCHA",
   "main": "dist/lib/recaptcha.es.js",
   "browser": "dist/lib/recaptcha.umd.js",
