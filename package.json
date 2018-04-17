@@ -1,0 +1,40 @@
+{
+  "name": "hyperapp-google-invisible-recaptcha",
+  "version": "1.0.0",
+  "description": "Hyperapp Component that implements the Google Invisible reCAPTCHA",
+  "main": "dist/lib/recaptcha.js",
+  "scripts": {
+    "start": "webpack-dev-server --config example/webpack.config.js",
+    "build:example": "webpack --config example/webpack.config.js --env production",
+    "build": "webpack --config ./webpack.config.js --env production",
+    "deploy": "npm run build && ./scripts/gh-pages.sh",
+    "test": "jest --coverage --no-cache"
+  },
+  "author": "Albert Alises Sorribas",
+  "license": "MIT",
+  "dependencies": {
+    "hyperapp": "^1.2.5",
+    "uuid": "^3.2.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-core": "^6.22.1",
+    "babel-loader": "^7.1.2",
+    "babel-minify-webpack-plugin": "^0.2.0",
+    "babel-plugin-transform-react-jsx": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.0",
+    "eslint": "^4.13.1",
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jest": "^21.7.0",
+    "eslint-plugin-react": "^7.5.1",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "imports": "^1.0.0",
+    "jest": "^22.1.4",
+    "node-libs-browser": "^2.0.0",
+    "uglifyjs-webpack-plugin": "^1.2.4",
+    "webpack": "^3.4.0",
+    "webpack-dev-server": "^2.4.2"
+  }
+}
