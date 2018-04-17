@@ -30,6 +30,7 @@ module.exports = (env) => {
           path.resolve(__dirname, '../'),
         ],
       }],
-    }
+    },
+    plugins,
   };
 };
