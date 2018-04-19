@@ -18,6 +18,10 @@
   ],
   "author": "Albert Alises Sorribas",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aalises/hyperapp-google-invisible-recaptcha"
+  },
   "dependencies": {
     "hyperapp": "^1.2.5",
     "uuid": "^3.2.1"
