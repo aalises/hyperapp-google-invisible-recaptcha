@@ -22,9 +22,14 @@ const injectScript = (locale) => {
   document.body.appendChild(script);
 };
 
+const destroyRefs = () => {
+  delete window[callbackName];
+  delete container;
+}
+
 const createRecaptcha = (props) => {
   const {
-    sitekey, locale = 'en', badge = 'bottomright', onResolved, onLoaded = function onLoaded() {}, onInstanceCreated,
+    sitekey, locale = 'en', badge = 'bottomright', onResolved, onLoaded = function onLoaded() { }, onInstanceCreated,
   } = props;
 
   const callbackName = `GoogleRecaptchaResolved-${uuid()}`;
@@ -63,5 +68,5 @@ const createRecaptcha = (props) => {
 
 
 export default props => (
-  h('div', { oncreate: (el) => { container = el; createRecaptcha(props); } }, [])
+  h('div', { oncreate: (el) => { container = el; createRecaptcha(props); }, ondestroy: () => destroyRefs() }, [])
 );
