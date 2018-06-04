@@ -1,5 +1,7 @@
 # hyperapp-google-invisible-recaptcha
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/aalises/hyperapp-google-invisible-recaptcha.svg)](https://greenkeeper.io/)
+
 A Hyperapp component that implements the Google Invisible reCAPTCHA.
 
 ### [Demo][demo] ###
