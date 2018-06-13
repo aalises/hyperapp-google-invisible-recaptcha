@@ -3,6 +3,7 @@ import uuid from 'uuid/v4';
 
 const renderers = [];
 let container = null;
+const recaptchaId = null; //The instance of the recaptcha
 
 const injectScript = (locale) => {
   window.GoogleRecaptchaLoaded = () => {
@@ -23,8 +24,11 @@ const injectScript = (locale) => {
 };
 
 const destroyRefs = () => {
+  while (container.firstChild) {
+    container.removeChild(container.firstChild);
+  }
+  window.grecaptcha.reset(recaptchaId);
   delete window[callbackName];
-  delete container;
 }
 
 const createRecaptcha = (props) => {
@@ -38,12 +42,14 @@ const createRecaptcha = (props) => {
   /* Instantiates the recaptcha */
   const loaded = () => {
     if (container) {
-      const recaptchaId = window.grecaptcha.render(container, {
+      const wrapper = document.createElement("div");
+      recaptchaId = window.grecaptcha.render(container, {
         sitekey,
         size: 'invisible',
         badge,
         callback: callbackName,
       });
+      container.appendChild(wrapper);
 
       /* Recaptcha functions */
       onInstanceCreated({
