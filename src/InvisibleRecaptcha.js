@@ -3,7 +3,7 @@ import uuid from 'uuid/v4';
 
 const renderers = [];
 let container = null;
-const recaptchaId = null; //The instance of the recaptcha
+let recaptchaId = null; //The instance of the recaptcha
 
 const injectScript = (locale) => {
   window.GoogleRecaptchaLoaded = () => {
