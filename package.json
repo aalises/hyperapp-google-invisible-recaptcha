@@ -43,7 +43,7 @@
     "imports": "^1.0.0",
     "jest": "^23.1.0",
     "node-libs-browser": "^2.0.0",
-    "rollup": "^0.60.0",
+    "rollup": "^0.61.0",
     "rollup-plugin-babel": "^3.0.3",
     "rollup-plugin-terser": "^1.0.1",
     "uglifyjs-webpack-plugin": "^1.2.4",
