@@ -23,7 +23,7 @@
     "url": "https://github.com/aalises/hyperapp-google-invisible-recaptcha"
   },
   "dependencies": {
-    "hyperapp": "^1.2.6",
+    "hyperapp": "^2.0.0",
     "uuid": "^3.2.1"
   },
   "devDependencies": {
